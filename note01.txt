@@ -1,0 +1,8 @@
+JSON
+Javascript Object Notation
+
+
+*key point - 데이터의 Serialization(직렬화)*
+
+
+1. Object를 어떻게 직렬화(Serialization)
