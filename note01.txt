@@ -4,5 +4,6 @@ Javascript Object Notation
 
 *key point - 데이터의 Serialization(직렬화)*
 
-
-1. Object를 어떻게 직렬화(Serialization)
+공부 포인트
+1. Object를 어떻게 직렬화(Serialization)해서 JSON으로 변환할지
+2. 변환한 JSON을 다시 변환(deserialize)해서 다시 Object로 변환할지
