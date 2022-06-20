@@ -9,5 +9,14 @@
 </head>
 <body>
     <h1>실무를 위한 증진!</h1>
+    <script>
+        fetch('https://github.com/ShiroiHikaru/note/blob/master/json.json')
+            .then((Response) => {
+                return Response.json()
+            })
+            .then((결과) =>{
+                console.log(결과)
+            })
+    </script>
 </body>
 </html>
