@@ -42,6 +42,7 @@ h1, h2, h3, h4, h5, h6{
     width: 70%;
     margin: auto;
     display: flex;
+    justify-content: flex-start;
     position: fixed;
     left: 200px;
     padding: 40px;
@@ -54,29 +55,62 @@ header h1 a{
 
 #header #menu{
     width: 1000px;
-    position: absolute;
-    right: 40px;
+    margin-left: 30px;
 }
 
 #header #menu .main-nav{
     display: flex;
-    justify-content: space-between;
-    border: 2px solid green;
+    justify-content: flex-start;
+    width: 1000px;
     padding: 0;
     margin: 0;
 }
 
-#header #menu .main-nav li{
-    font-weight: bold;
-    font-size: var(--submu);
-    width: 250px;
-    transition: width 0.3s;
+#header #menu .main-nav .main-list{
+    width: calc(1000px / 4);
 }
 
-#header #menu .main-nav li:hover{
-    width: 250px;
-    color: rgb(0, 72, 226);
+#header #menu .main-nav .main-list .main-list-title{
+    font-weight: bold;
+    font-size: var(--submu);
+    width: 100px;
+    margin-bottom: 10px;
 }
+
+#header #menu .main-nav .main-list .main-list-title:hover{
+    color:  rgb(0, 72, 226);
+    transition: .5s;
+}
+
+#header #menu .main-nav .main-list .main-list-title::after{
+    content: '';
+    width: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: rgb(0, 72, 226);
+    transition: width .5s;
+}
+
+#header #menu .main-nav .main-list .main-list-title:hover::after{
+    width: 100px;
+}
+
+#header #menu .main-nav .main-list .sub-list .sns-icon ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+}
+
+#header #menu .main-nav .main-list .sub-list .sns-icon ul li{
+    width: 50px;
+    border: 2px solid green;
+    margin: 0;
+    padding: 0;
+}
+
 
 /* submenu */
 #header #menu .main-nav li .sub-list li{
@@ -84,5 +118,54 @@ header h1 a{
     height: 35px;
     line-height: 35px;
     font-weight: 400;
-    display: none;
+    margin-top: 10px;
+}
+
+#header #menu .sub-nav-wrap{
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+#header #menu .sub-nav-wrap .sub-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    position: absolute;
+    right: 0;
+}
+
+#header #menu .sub-nav-wrap .sub-nav li a{
+    color: var(--black);
+}
+
+#header #menu .sub-nav-wrap .sub-nav li a:hover{
+    color: rgb(0, 72, 226);
+    transition: 0.3s;
+}
+
+#header #menu .sub-nav-wrap .linked-btn{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    width: 260px;
+    top: 30px;
+    right: 0px;
+    font-size: 0.8rem;
+}
+
+#header #menu .sub-nav-wrap .linked-btn li{
+    padding-left: 5px;
+}
+
+#header #menu .sub-nav-wrap .linked-btn li button{
+    background: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+
+#header #menu .sub-nav-wrap .linked-btn li .loop-blk{
+    background: var(--black);
+    color: var(--white);
 }
