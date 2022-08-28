@@ -4,6 +4,7 @@ body{
     padding: 0;
     background: #f0ff48;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 ul, li, h1{
@@ -29,30 +30,43 @@ header #navigator{
     width: 1400px;
     height: 120px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-header #navigator nav{
-    width: calc(1400px - 300px);
+header #navigator .logo{
+    position: absolute;
+    top: 10px;
 }
+
 
 header #navigator nav .mainNav{
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    top: 70px;
+    width: 1400px;
 }
 
 header #navigator nav .mainNav li{
-    width: calc(1050px / 4);
+    width: calc(1400px / 4);
     font-size: 1.1rem;
     line-height: 2.5rem;
     font-weight: bold;
     cursor: pointer;
+    top: 0;
 }
+
+header #navigator nav .mainNav li a{
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+
 
 header #navigator nav .mainNav li .subNav{
     display: none;
+    background: #fff;
+    transition-duration: 0.3s;
 }
 
 header #navigator nav .mainNav li .subNav li{
