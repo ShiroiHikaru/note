@@ -23,20 +23,56 @@ header{
     max-height: 120px;
     height: 100vw;
     background: #fff;
+    position: relative;
 }
 
 
-header #header-wrap{
+#header-wrap{
     width: 1400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     transform: translateX(18%);
     border: 1px solid red;
+    position: absolute;
+    top: 20px;
 }
 
-header #header-wrap nav{
-    width: 1400px;
-    background-color: pink;
+.topMenu{
+    width: 100%;
     display: flex;
+    padding: 15px 0px 0px 0px;
+}
+
+.mainList{
+    display: grid;
+    grid-template-columns: repeat(4, 350px);
+}
+
+.category span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.category span:hover{
+    color: #315afc;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.subNav{
+    margin: 10px 0px 0px 0px;
+    background-color: #fff;
+    display: none;
+}
+
+.subNav li{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.show{
+    display: block;
 }

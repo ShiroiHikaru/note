@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+    <div class="top">
+      <h2>SOUND PANDA</h2>
+      <button type="button" class="open">버튼</button>  
+    </div>
+    <ul id="menu" class="menu">
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+      <li>메뉴4</li>
+      <li>메뉴5</li>
+    </ul>
+  <script type="text/javascript">
+    document.querySelectorAll('.open')[0].addEventListener('click', function(){
+      document.querySelectorAll('.menu')[0].classList.toggle('show');
+    });
+
+    // $('.open').on('click', function(){
+    //   $('.menu').slideToggle();
+    // });
+  </script>
+</body>
+</html>
